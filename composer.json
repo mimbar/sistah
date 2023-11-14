@@ -1,0 +1,54 @@
+{
+    "name": "mimbar/sistah",
+    "description": "Fetch data dari sister karena terlalu malas kalau tiap bikin project harus bikin class terus. huft.",
+    "keywords": [
+        "mimbar",
+        "sistah"
+    ],
+    "homepage": "https://github.com/mimbar/sistah",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Mimbar Adi Nugraha",
+            "email": "mimbar.muse@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mimbar\\Sistah\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mimbar\\Sistah\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mimbar\\Sistah\\SistahServiceProvider"
+            ],
+            "aliases": {
+                "Sistah": "Mimbar\\Sistah\\SistahFacade"
+            }
+        }
+    }
+}
