@@ -34,7 +34,7 @@ class Sistah
 
         $this->id_dosen = $id_dosen;
 
-        $this->sister_url = $token->sister_url;
+        $this->sister_url = $token->sister_url."/".$ws.".php/1.0";
 
         $gz = Http::baseUrl($this->sister_url)
             ->withToken($this->token)
